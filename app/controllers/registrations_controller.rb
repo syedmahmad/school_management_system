@@ -1,5 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
+
   def create
+    fasdfasd
     path = :back
     user = User.find_by_mobile_number(params[:user][:mobile_number])
     if user
@@ -14,4 +16,18 @@ class RegistrationsController < Devise::RegistrationsController
     end
     redirect_to path
   end
+
+
+  def new
+    @user = User.new
+  end
+
+  private
+
+    def set_user
+      if @user = User.find_by_id(params[:id]) || User.find(params[:user][:id])
+      else
+        render :file => 'public/404.html', :status => :not_found, :layout => false
+      end
+    end
 end

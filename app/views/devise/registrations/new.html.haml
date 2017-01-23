@@ -1,0 +1,29 @@
+.container
+  .outlet
+    .row
+      .col-sm-8.col-md-5.col-md-offset-4.col-sm-offset-2
+        .panel.panel-default.contact-details-box
+          .panel-heading
+            %h3.text-center Contact Details
+          .panel-body
+            = form_for @user, url: user_registration_path, method: 'post', html: { multipart: true, class: 'form-horizontal group-border hover-stripped' } do |f|
+              = f.hidden_field :id, value: @user.id
+              .form-group
+                / = f.label 'Name', class: 'col-lg-2 col-md-2 col-sm-12 control-label'
+                .col-lg-12
+                  = f.text_field :name, class: 'form-control', required: true, placeholder: "Name"
+              .form-group
+                / = f.label 'Email', class: 'col-lg-2 col-md-2 col-sm-12 control-label'
+                .col-lg-12
+                  = f.email_field :email, class: 'form-control', required: true, placeholder: "Email"
+              .form-group
+                / = f.label 'Phone *', class: 'col-lg-2 col-md-2 col-sm-12 control-label'
+                .col-lg-12
+                  = f.text_field :mobile_number, class: 'form-control', pattern: '\d{11}$', required: true, oninvalid: "setCustomValidity('Plz enter valid phone number')", onchange: "try{setCustomValidity('')}catch(e){}", placeholder: "phone number"
+              - if !f.object.id.present?
+                .form-group
+                  / = f.label 'Password', class: 'col-lg-2 col-md-2 col-sm-12 control-label'
+                  .col-lg-12
+                    = f.password_field :password, class: 'form-control', required: true, placeholder: "Password"
+              .form-group.btn-submit
+                = f.submit "submit", class: 'btn btn-primary'

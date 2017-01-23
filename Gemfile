@@ -6,7 +6,11 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise'
+gem "twitter-bootstrap-rails"
+gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
+                              :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
 
+gem 'haml-rails', '~> 0.9.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use postgresql as the database for Active Record
