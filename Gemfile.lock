@@ -47,6 +47,7 @@ GEM
       tzinfo (~> 1.1)
     arel (7.1.4)
     bcrypt (3.1.11)
+    bootstrap_form (2.3.0)
     builder (3.2.3)
     byebug (9.0.6)
     coffee-rails (4.2.1)
@@ -204,6 +205,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-datepicker-rails!
+  bootstrap_form (~> 2.3.0)
   byebug
   coffee-rails (~> 4.2)
   devise

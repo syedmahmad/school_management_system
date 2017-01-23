@@ -7,5 +7,5 @@ class User < ApplicationRecord
  validates :mobile_number, :presence => {:message => 'Please enter valid phone number!'},
            :numericality => true,
            :uniqueness => true,
-           :length => { :minimum => 10, :maximum => 15 }, if: Proc.new{|user| !user.oauth_account.present?}
+           :length => { :minimum => 10, :maximum => 15 }, if: Proc.new{|user| !user.present?}
 end
