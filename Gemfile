@@ -5,8 +5,13 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'bootstrap_form'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
 gem "devise", '~> 4.0.0.rc1'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap_form'
 gem "twitter-bootstrap-rails"
 gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
                               :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'

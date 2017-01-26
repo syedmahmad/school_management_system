@@ -1,14 +1,6 @@
 .flash_msg_div
   - flash.each do |key, value|
-    = key
-    = key.class.name
-    %div{:class => "alert-msg alert fade in"}
+    %div{:class => "alert-msg alert #{bootstrap_class_for(key)} fade in"}
       %button.close{"data-dismiss" => "alert"} ×
       = value
 
-:css
-  .flash_msg_div {
-    height: 200px;
-    width: 200px;
-    background-color: grey;
-  }
