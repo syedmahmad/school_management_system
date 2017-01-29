@@ -1,11 +1,7 @@
-#header .navbar .navbar-collapse,
-#header .navbar{
-  .non_mobile_nav{
-    text-align: center;
-    a{
-      img{
-        float: none;
-      }
-    }
-  }
+.navbar-right >li{
+  color: #9d9d9d !important; 
+}
+
+.right-memu{
+  display: inline-block;
 }

@@ -4,6 +4,7 @@ class SessionsController < Devise::SessionsController
   end
 
 
+  # this will call for signin 
   def create
     phone = params[:user][:mobile_number].gsub(/[^0-9a-z ]/i, '')
     if phone[0 .. 1] == "92"
@@ -25,4 +26,5 @@ class SessionsController < Devise::SessionsController
     end
     redirect_to path
   end
+
 end

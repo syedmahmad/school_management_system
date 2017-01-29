@@ -11,10 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap
-//= require bootstrap-sprockets
+//= require tether
 //= require jquery_ujs
 //= require turbolinks
-//= require twitter/bootstrap
+//= require bootstrap
+//= require bootstrap.min
+//= require bootstrap-sprockets
 //= require bootstrap-datepicker
 //= require_tree .
