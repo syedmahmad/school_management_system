@@ -18,4 +18,5 @@
 //= require bootstrap.min
 //= require bootstrap-sprockets
 //= require bootstrap-datepicker
+//= require intlTelInput
 //= require_tree .

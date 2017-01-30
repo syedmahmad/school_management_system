@@ -1,0 +1,54 @@
+.container
+  .outlet
+    .row
+      .col-sm-6.col-md-5.col-md-offset-4.col-sm-offset-2
+        .add-new-student
+          .panel.panel-default
+            .panel-heading
+              %h3.text-center Student
+            .panel-body
+              = form_for @student, html: { multipart: true, class: 'form-horizontal group-border hover-stripped' } do |f|
+                .form-group
+                  .col-lg-12
+                    = f.text_field :name, class: 'form-control', required: true, placeholder: "Student Name"
+                .form-group
+                  .col-lg-12
+                    = f.text_field :gradient, class: 'form-control', required: true, placeholder: "Gradient Name"
+                .form-group
+                  .col-lg-12
+                    = f.text_field :joining_date, class: 'form-control', "data-provide" => 'datepicker', required: true, placeholder: "Date Of Birth"
+                .form-group
+                  .col-lg-12
+                    = f.text_field :sex, class: 'form-control', required: true, placeholder: "sex"
+                .form-group
+                  .col-lg-12
+                    %input#phone{:type => "tel", name: 'student[mobile]', class: 'form-control', placeholder: "321-44xxx46"}
+                .form-group
+                  .col-lg-12
+                    = f.text_field :city, class: 'form-control', required: true, placeholder: "City"
+                .form-group
+                  .col-lg-12
+                    = f.text_area :address, class: 'form-control', :rows => 5, required: true, placeholder: "Address"                
+                  = f.submit "submit", class: 'btn btn-primary hvr-sweep-to-top', id: 'check_phone'
+
+:javascript
+$(function() {
+  $("#phone").intlTelInput({
+    initialCountry: 'pk',
+    formatOnInit: true,
+    separateDialCode: true
+  });
+
+  $("#check_phone").click(function(e) {
+    alert("fasfasdfa");
+      e.preventDefault();
+      if($("#phone").intlTelInput("isValidNumber")) {
+        var dialCode = $("#phone").intlTelInput("getSelectedCountryData").dialCode
+        $('#phone').val(dialCode + $('#phone').val());
+        $(this).closest('form').submit();
+      } else {
+        $('.content-wrapper').prepend( "<p class='alert alert-danger'>Please enter valid phone.</p>" )
+        $(".alert").slideDown(500, function(){setTimeout(function(){$(".alert").slideUp(500, function(){$(".js-flash-notification-div").remove()});},3000);});
+      }
+    });
+});

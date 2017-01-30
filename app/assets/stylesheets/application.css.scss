@@ -5,9 +5,13 @@
 @import "registrations";
 @import "alert";
 
+@import "bootstrap-datepicker";
+
 @import "navbar";
+@import "intlTelInput";
 @import "sign_in";
 @import "logo-nav";
+@import "students";
 @import "simple-sidebar";
 /*override to display boostrape glyphinons*/
 @font-face {

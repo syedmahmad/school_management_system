@@ -1,75 +1,87 @@
-%nav.navbar.navbar-inverse.sidebar{:role => "navigation"}
-  .container-fluid
-    .navbar-header
-      %button.navbar-toggle{"data-target" => "#bs-sidebar-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{:href => "#"} Brand
-    #bs-sidebar-navbar-collapse-1.collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        %li.active
-          %a{:href => "#"}
-            Home
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-home{:style => "font-size:16px;"}
-        %li
-          %a{:href => "#"}
-            Profile
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-user{:style => "font-size:16px;"}
-        %li
-          %a{:href => "#"}
-            Messages
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-envelope{:style => "font-size:16px;"}
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-            Settings
-            %span.caret
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-cog{:style => "font-size:16px;"}
-          %ul.dropdown-menu.forAnimate{:role => "menu"}
-            %li
-              %a{:href => "#"} Action
-            %li
-              %a{:href => "#"} Another action
-            %li
-              %a{:href => "#"} Something else here
-            %li.divider
-            %li
-              %a{:href => "#"} Separated link
-            %li.divider
-            %li
-              %a{:href => "#"} One more separated link
-        %li
-          %a{:href => "#"}
-            Home
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-home{:style => "font-size:16px;"}
-        %li
-          %a{:href => "#"}
-            Profile
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-user{:style => "font-size:16px;"}
-        %li
-          %a{:href => "#"}
-            Messages
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-envelope{:style => "font-size:16px;"}
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-            Settings
-            %span.caret
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-cog{:style => "font-size:16px;"}
-          %ul.dropdown-menu.forAnimate{:role => "menu"}
-            %li
-              %a{:href => "#"} Action
-            %li
-              %a{:href => "#"} Another action
-            %li
-              %a{:href => "#"} Something else here
-            %li.divider
-            %li
-              %a{:href => "#"} Separated link
-            %li.divider
-            %li
-              %a{:href => "#"} One more separated link
-
-
-
-            
+%form{:action => "#", :name => "StudentRegistration", :onsubmit => "return(validate());"}
+  %table{:align => "center", :bgcolor => "99FFFF", :cellpadding => "2", :cellspacing => "2", :width => "20%"}
+    %tr
+      %td{:colspan => "2"}
+        %center
+          %font{:size => "4"}
+            %b Student Registration Form
+    %tr
+      %td Name
+      %td
+        %input#textname{:name => "textnames", :size => "30", :type => "text"}/
+    %tr
+      %td Father Name
+      %td
+        %input#fathername{:name => "fathername", :size => "30", :type => "text"}/
+    %tr
+      %td Postal Address
+      %td
+        %input#paddress{:name => "paddress", :size => "30", :type => "text"}/
+    %tr
+      %td Personal Address
+      %td
+        %input#personaladdress{:name => "personaladdress", :size => "30", :type => "text"}/
+    %tr
+      %td Sex
+      %td
+        %input{:name => "sex", :size => "10", :type => "radio", :value => "male"}>/
+        Male
+        %input{:name => "sex", :size => "10", :type => "radio", :value => "Female"}>/
+        Female
+    %tr
+      %td City
+      %td
+        %select{:name => "City"}
+          %option{:selected => "selected", :value => "-1"} select..
+          %option{:value => "New Delhi"} NEW DELHI
+          %option{:value => "Mumbai"} MUMBAI
+          %option{:value => "Goa"} GOA
+          %option{:value => "Patna"} PATNA
+    %tr
+      %td Course
+      %td
+        %select{:name => "Course"}
+          %option{:selected => "selected", :value => "-1"} select..
+          %option{:value => "B.Tech"} B.TECH
+          %option{:value => "MCA"} MCA
+          %option{:value => "MBA"} MBA
+          %option{:value => "BCA"} BCA
+    %tr
+      %td District
+      %td
+        %select{:name => "District"}
+          %option{:selected => "selected", :value => "-1"} select..
+          %option{:value => "Nalanda"} NALANDA
+          %option{:value => "UP"} UP
+          %option{:value => "Goa"} GOA
+          %option{:value => "Patna"} PATNA
+    %tr
+      %td State
+      %td
+        %select{:name => "State"}
+          %option{:selected => "selected", :value => "-1"} select..
+          %option{:value => "New Delhi"} NEW DELHI
+          %option{:value => "Mumbai"} MUMBAI
+          %option{:value => "Goa"} GOA
+          %option{:value => "Bihar"} BIHAR
+    %tr
+      %td PinCode
+      %td
+        %input#pincode{:name => "pincode", :size => "30", :type => "text"}/
+    %tr
+      %td EmailId
+      %td
+        %input#emailid{:name => "emailid", :size => "30", :type => "text"}/
+    %tr
+      %td DOB
+      %td
+        %input#dob{:name => "dob", :size => "30", :type => "text"}/
+    %tr
+      %td MobileNo
+      %td
+        %input#mobileno{:name => "mobileno", :size => "30", :type => "text"}/
+    %tr
+      %td
+        %input{:type => "reset"}/
+      %td{:colspan => "2"}
+        %input{:type => "submit", :value => "Submit Form"}/
