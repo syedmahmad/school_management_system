@@ -1,5 +1,5 @@
 class Student < ApplicationRecord
-  validates :mobile_number, :presence => {:message => 'Please enter valid phone number!'},
+  validates :mobile, :presence => {:message => 'Please enter valid phone number!'},
                      :numericality => true,
                      :uniqueness => true,
                      :length => { :minimum => 10, :maximum => 15 }

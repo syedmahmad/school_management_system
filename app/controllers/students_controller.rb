@@ -2,9 +2,10 @@ class StudentsController < ApplicationController
 
   before_action :authenticate_user!
   before_action :set_student, only: [:edit, :show, :update, :destroy]
-  
+
 
   def index
+    @students = Student.all
   end
 
   def new
@@ -21,8 +22,7 @@ class StudentsController < ApplicationController
     student_created = Student.create(student_params)
     if student_created.id.present?
       flash[:notice] = "Thank you. Student has been created."
-      fasfasfasd
-      redirect_to cases_path
+      render action: "index"
     else
       flash[:notice] = "Something went wrong. Please try again."
       redirect_to :back
@@ -35,7 +35,7 @@ class StudentsController < ApplicationController
   private
 
     def student_params
-      params.require(:student).permit(:name, :gradient, :sex, :city, :address, :age, :mobile)
+      params.require(:student).permit(:name, :gradient, :sex, :city, :address, :age, :mobile, :joining_date)
     end
 
     def set_student
