@@ -25,6 +25,9 @@
                     %input#phone{:type => "tel", name: 'student[mobile]', class: 'form-control', placeholder: "321-44xxx46"}
                 .form-group
                   .col-lg-12
+                    = f.select(:student_class_id, @classes.map {|type| [type.name, type.id]}, {}, { :class => 'form-control' })  
+                .form-group
+                  .col-lg-12
                     = f.text_field :city, class: 'form-control', required: true, placeholder: "City"
                 .form-group
                   .col-lg-12

@@ -19,8 +19,9 @@
     = javascript_include_tag 'application'
     = stylesheet_link_tag 'application', media: 'all'
   %body{:class => "#{@sigin_page ? 'onboarding_background' : ''}"}
-    = render 'shared/navbar'
-    = render 'shared/sidebar'
+    - if user_signed_in?
+      = render 'shared/navbar'
+      = render 'shared/sidebar'
     #content{:class => "application_content #{controller_name}"}
     / Start .content-wrapper
     .content-wrapper

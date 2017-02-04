@@ -9,6 +9,7 @@ end
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
+
 gem 'intl-tel-input-rails'
 gem 'remotipart'
 gem "devise", '~> 4.0.0.rc1'

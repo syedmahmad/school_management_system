@@ -5,3 +5,161 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Student.create!([
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    },
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    },
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    },
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    },
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    },
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    },
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    },
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    },
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    },
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    },
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    },
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    },
+                    {
+                        name: "test student",
+                        gradient: "test student gradient",
+                        sex: "male",
+                        city: "lahore",
+                        address: "xyz",
+                        age: 12,
+                        mobile: 923213333444,
+                        joining_date: "10/1/2017",
+                        student_class_id: 1
+
+                    }
+                ])

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   devise_for :users,:controllers => { sessions: "sessions"}
-  root to: "home#index"
+  root to: "students#index"
 
   devise_scope :user do get "/" => "sessions#new"
   end
@@ -13,8 +13,7 @@ Rails.application.routes.draw do
     end
   end
 
-
-
   resources :students 
+  resources :student_classes
 
 end
