@@ -1,0 +1,37 @@
+
+-if @students.present?
+  .col-md-12.list-cases-holder.p0
+    %h3 Students
+    - @students.each do |student_obj|
+      .col-md-12.p0
+        .panel.panel-default
+          .header-holder
+            .col-xs-12.col-sm-8.p0
+              %h4
+                = student_obj.name.titleize
+            .col-xs-12.col-sm-4.p0
+              .btn-area.pull-right
+                = link_to 'Edit', new_student_path(student_obj),class: 'btn btn-primary'
+                = link_to 'Detail', new_student_path(student_obj) ,class: 'btn btn-info'
+                = link_to 'Delete', student_obj, method: :delete, data: { confirm: "You sure?" } ,class: 'btn btn-danger'
+          .panel-body
+            .row
+              .col-sm-12.donations.cases-details
+
+                %p.text-details
+                  = student_obj.mobile
+                %ul
+                  %li
+                    %p
+                      %span
+                        joining_Date:
+                      = student_obj.joining_date
+                  %li
+                    %p
+                      %span
+                        age:
+                      = student_obj.age
+
+- else
+  .text-center.no-data-box
+    %p No record found.

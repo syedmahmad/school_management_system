@@ -5,8 +5,23 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'devise'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+
+gem 'intl-tel-input-rails'
+gem 'remotipart'
+gem "devise", '~> 4.0.0.rc1'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap_form'
+gem "twitter-bootstrap-rails"
+gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
+                              :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
+
+gem 'haml-rails', '~> 0.9.0'
+gem "better_errors"
+gem 'binding_of_caller'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use postgresql as the database for Active Record

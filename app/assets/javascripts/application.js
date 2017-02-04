@@ -11,6 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require tether
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
+//= require bootstrap.min
+//= require bootstrap-sprockets
+//= require intlTelInput
+//= require libphonenumber/utils
+//= require bootstrap-datepicker
 //= require_tree .

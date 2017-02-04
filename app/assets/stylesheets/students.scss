@@ -1,0 +1,43 @@
+// Place all the styles related to the sturdents controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.add-new-student{
+    margin: 100px 0;
+    padding: 0px 0px 20px 0px;
+    border-radius: 0;
+    padding: 0;
+    overflow: hidden;
+    .form-control{
+      border-radius: 0;
+      min-height: 45px;
+    }
+    .form-horizontal {
+      .form-group {
+        margin-right: -90px !important;
+        margin-left: -90px !important;
+      }
+    }
+    .panel{
+      background-color: #f7f7f7;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .btn-block{
+      text-align: center;
+      .btn{
+        display: block;
+        min-width: 200px;
+        max-width: 200px;
+        margin: 0 auto 5px;
+      }
+    }
+}
+
+.create-student-btn-holder{
+  .btn{
+    min-width: 200px;
+    min-height: 44px;
+    line-height: 34px;
+  }
+}
