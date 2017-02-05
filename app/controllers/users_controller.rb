@@ -7,11 +7,7 @@ class UsersController < ApplicationController
   # for sign_up
   def sign_up
     phone = params[:user][:mobile_number].gsub(/[^0-9a-z ]/i, '')
-    if phone[0 .. 1] == "92"
-      params[:user][:mobile_number] = "0"+phone[2 .. -1]
-    else
-      params[:user][:mobile_number] = phone
-    end
+    params[:user][:mobile_number] = phone
     user = User.find_by_id(params[:user][:id]) || User.new
     user.assign_attributes(user_contact_params)
 
