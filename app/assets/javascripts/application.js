@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require bootstrap
 //= require bootstrap.min
+//= require dataTables/jquery.dataTables
 //= require bootstrap-sprockets
 //= require intlTelInput
 //= require libphonenumber/utils
