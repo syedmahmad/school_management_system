@@ -101,6 +101,7 @@
 
     /*gives sidebar width/height*/
     nav.sidebar{
+      position: fixed;
       min-width: 140px;
       height: 100%;
       margin-left: 0px;
@@ -153,3 +154,11 @@
   section{
     padding-left: 15px;
   }
+
+#bs-sidebar-navbar-collapse-1 {
+  ul {
+    li {
+     width: 108%;
+    }
+  }
+}

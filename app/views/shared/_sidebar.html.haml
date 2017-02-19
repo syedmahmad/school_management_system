@@ -1,76 +1,41 @@
 %nav.navbar.navbar-inverse.sidebar{:role => "navigation"}
-  .container-fluid
-    .navbar-header
-      %button.navbar-toggle{"data-target" => "#bs-sidebar-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{:href => "#"} Brand
-    #bs-sidebar-navbar-collapse-1.collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        %li.active
-          %a{:href => "#"}
-            Home
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-home{:style => "font-size:16px;"}
-        %li
-          %a{:href => "#"}
-            Profile
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-user{:style => "font-size:16px;"}
-        %li
-          %a{:href => "#"}
-            Messages
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-envelope{:style => "font-size:16px;"}
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-            Settings
-            %span.caret
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-cog{:style => "font-size:16px;"}
-          %ul.dropdown-menu.forAnimate{:role => "menu"}
-            %li
-              %a{:href => "#"} Action
-            %li
-              %a{:href => "#"} Another action
-            %li
-              %a{:href => "#"} Something else here
-            %li.divider
-            %li
-              %a{:href => "#"} Separated link
-            %li.divider
-            %li
-              %a{:href => "#"} One more separated link
-        %li
-          %a{:href => "#"}
-            Home
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-home{:style => "font-size:16px;"}
-        %li
-          %a{:href => "#"}
-            Profile
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-user{:style => "font-size:16px;"}
-        %li
-          %a{:href => "#"}
-            Messages
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-envelope{:style => "font-size:16px;"}
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-            Settings
-            %span.caret
-            %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-cog{:style => "font-size:16px;"}
-          %ul.dropdown-menu.forAnimate{:role => "menu"}
-            %li
-              %a{:href => "#"} Action
-            %li
-              %a{:href => "#"} Another action
-            %li
-              %a{:href => "#"} Something else here
-            %li.divider
-            %li
-              %a{:href => "#"} Separated link
-            %li.divider
-            %li
-              %a{:href => "#"} One more separated link
-              
+  .navbar-header
+    %button.navbar-toggle{"data-target" => "#bs-sidebar-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+      %span.sr-only Toggle navigation
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %a.navbar-brand{:href => "#"} Planet 9
+  #bs-sidebar-navbar-collapse-1.collapse.navbar-collapse
+    %ul.nav.navbar-nav
+      %li.active
+        %a{:href => "#"}
+          Home
+          %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-home{:style => "font-size:16px;"}
+      %li
+        %a{:href => "#"}
+          Students
+          %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-book{:style => "font-size:16px;"}
+      %li
+        %a{:href => "#"}
+          Teachers
+          %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-plane{:style => "font-size:16px;"}
+      %li
+        %a{:href => "#"}
+          Attendance
+          %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-file{:style => "font-size:16px;"}
+      %li
+        %a{:href => "#"}
+          Contact Us
+          %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-earphone{:style => "font-size:16px;"}
+      %li
+        %a{:href => "#"}
+          About Us
+          %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-user{:style => "font-size:16px;"}
+      %li
+        %a{:href => destroy_user_session_path, method: :delete}
+          Logout
+          %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-log-out{:style => "font-size:16px;"}
 
 
-
-            
+          

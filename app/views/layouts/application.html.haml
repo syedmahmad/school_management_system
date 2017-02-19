@@ -20,15 +20,10 @@
     = stylesheet_link_tag 'application', media: 'all'
   %body{:class => "#{@sigin_page ? 'onboarding_background' : ''}"}
     - if user_signed_in?
-      = render 'shared/navbar'
+      = render 'shared/navbar'  
       = render 'shared/sidebar'
-    #content{:class => "application_content #{controller_name}"}
-    / Start .content-wrapper
-    .content-wrapper
-      =# render '/layouts/partials/top_alert'
-      .outlet
-        -# .container
-        = render partial: 'layouts/partials/flash_messages', flash: flash
+      = render partial: 'layouts/partials/flash_messages', flash: flash
+      .pull-right.align-middle
         = yield
 
     .clearfix

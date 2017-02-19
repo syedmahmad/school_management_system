@@ -1,26 +1,25 @@
-.container
-  .outlet
-    %table.display.responsive.no-wrap.datatable
-      %thead
+..align-top
+  %table.display.responsive.no-wrap.datatable
+    %thead
+      %tr
+        %th Name
+        %th Gradient
+        %th Sex
+        %th City
+        %th Address
+        %th Age
+        %th Mobile
+        %th Joining Date
+        %th Class
+    %tbody
+      - @students.each do |student|
         %tr
-          %th Name
-          %th Gradient
-          %th Sex
-          %th City
-          %th Address
-          %th Age
-          %th Mobile
-          %th Joining Date
-          %th Class
-      %tbody
-        - @students.each do |student|
-          %tr
-            %td= student.name
-            %td= student.gradient
-            %td= student.sex
-            %td= student.city
-            %td= student.address
-            %td= student.age
-            %td= student.mobile
-            %td= student.joining_date
-            %td= student.student_class.name
+          %td= student.name
+          %td= student.gradient
+          %td= student.sex
+          %td= student.city
+          %td= student.address
+          %td= student.age
+          %td= student.mobile
+          %td= student.joining_date
+          %td= student.student_class.name
