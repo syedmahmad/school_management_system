@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'attendances/index'
+
   devise_for :users,:controllers => { sessions: "sessions"}
   root to: "students#index"
 
@@ -15,5 +17,13 @@ Rails.application.routes.draw do
 
   resources :students 
   resources :student_classes
+  resources :teachers do
+     member do
+      get 'mark_attendance'
+    end
+    collection do
+      post 'save_mark_attendance'
+    end
+  end
 
 end

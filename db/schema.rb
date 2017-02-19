@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170131194018) do
+ActiveRecord::Schema.define(version: 20170211080825) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attendances", force: :cascade do |t|
+    t.boolean  "present"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "student_classes", force: :cascade do |t|
     t.string   "name"
@@ -34,7 +40,23 @@ ActiveRecord::Schema.define(version: 20170131194018) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "student_class_id"
+    t.integer  "attendances_id"
+    t.integer  "teacher_id"
+    t.index ["attendances_id"], name: "index_students_on_attendances_id", using: :btree
     t.index ["student_class_id"], name: "index_students_on_student_class_id", using: :btree
+    t.index ["teacher_id"], name: "index_students_on_teacher_id", using: :btree
+  end
+
+  create_table "teachers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "mobile"
+    t.string   "address"
+    t.integer  "salary"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "student_class_id"
+    t.string   "joining_date"
+    t.index ["student_class_id"], name: "index_teachers_on_student_class_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

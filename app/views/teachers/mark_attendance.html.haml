@@ -1,0 +1,28 @@
+.container
+  .outlet
+    = form_tag(save_mark_attendance_teachers_path, method: 'post') do
+      %table.display.responsive.no-wrap
+        %thead
+          %tr
+            %th Name
+            %th Roll No
+            %th Monday
+            %th Tuesday
+            %th Wednesday
+            %th Thursday
+            %th Friday
+            %th Saturday
+        %tbody
+          - @students.each do |student|
+            %tr
+              %td= student.name
+              %td= student.mobile
+              %td= check_box_tag('student')
+              %td= check_box_tag('student')
+              %td= check_box_tag('student')
+              %td= check_box_tag('student')
+              %td= check_box_tag('student')
+              %td= check_box_tag('student')
+      = submit_tag "Save", class: "button"
+  
+
