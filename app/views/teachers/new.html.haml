@@ -1,0 +1,31 @@
+= javascript_include_tag "page_specific/phone_validation"
+.container
+  .outlet
+    .row
+      .col-sm-6.col-md-5.col-md-offset-4.col-sm-offset-2
+        .add-new-student
+          .panel.panel-default
+            .panel-heading
+              %h3.text-center Teacher
+            .panel-body
+              = form_for @teacher, html: { multipart: true, class: 'form-horizontal group-border hover-stripped form-submit' } do |f|
+                .form-group
+                  .col-lg-12
+                    = f.text_field :name, class: 'form-control', required: true, placeholder: "Teacher Name"
+                .form-group
+                  .col-lg-12
+                    = f.text_field :joining_date, class: 'form-control', "data-provide" => 'datepicker', required: true, placeholder: "Date Of Birth"
+                .form-group
+                  .col-lg-12
+                    %input#phone{:type => "tel", name: 'teacher[mobile]', class: 'form-control', placeholder: "321-44xxx46"}
+                .form-group
+                  .col-lg-12
+                    = f.select(:student_class_id, @classes.map {|type| [type.name, type.id]}, {}, { :class => 'form-control' })  
+                .form-group
+                  .col-lg-12
+                    = f.number_field :salary, min: '0', step: 'any', class: 'form-control', required: true, placeholder: "Salary"
+                .form-group
+                  .col-lg-12
+                    = f.text_area :address, class: 'form-control', :rows => 5, required: true, placeholder: "Address"
+                .form-group
+                  = f.submit "submit", class: 'btn btn-primary hvr-sweep-to-top', id: 'check_phone'
