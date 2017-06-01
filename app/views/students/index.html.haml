@@ -1,25 +1,30 @@
-..align-top
+.align-top
   %table.display.responsive.no-wrap.datatable
     %thead
       %tr
         %th Name
         %th Gradient
         %th Sex
-        %th City
         %th Address
-        %th Age
         %th Mobile
         %th Joining Date
         %th Class
+        %th Edit
+        %th Detail
     %tbody
       - @students.each do |student|
         %tr
           %td= student.name
           %td= student.gradient
           %td= student.sex
-          %td= student.city
           %td= student.address
-          %td= student.age
           %td= student.mobile
           %td= student.joining_date
           %td= student.student_class.name
+          %td
+            = link_to edit_student_path(student), class: "btn btn-default" do
+              %span.fa.fa-pencil-square-o
+          %td
+            = link_to student_path(student), class: "btn btn-default" do
+              %span.fa.fa-eye
+              

@@ -14,6 +14,7 @@ gem 'intl-tel-input-rails'
 gem 'remotipart'
 gem "devise", '~> 4.0.0.rc1'
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem "font-awesome-rails"
 gem 'bootstrap_form'
 gem "twitter-bootstrap-rails"
 gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',

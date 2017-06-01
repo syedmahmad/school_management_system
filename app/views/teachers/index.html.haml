@@ -1,0 +1,19 @@
+.align-top
+  %table.display.responsive.no-wrap.datatable
+    %thead
+      %tr
+        %th Name
+        %th Mobile
+        %th Address
+        %th Salary
+        %th Joining Date
+        %th Assigned Class
+    %tbody
+      - @teachers.each do |teacher|
+        %tr
+          %td= teacher.name
+          %td= teacher.mobile
+          %td= teacher.address
+          %td= teacher.salary
+          %td= teacher.joining_date
+          %td= teacher.student_class.name

@@ -15,7 +15,13 @@ class StudentsController < ApplicationController
   def edit
   end
 
+  def show
+    puts "1111111111111111111\n"*100
+  end
+
   def update
+    @student.update(student_params)
+    redirect_to students_path
   end
 
   def create

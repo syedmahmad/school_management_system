@@ -25,5 +25,7 @@
       = render partial: 'layouts/partials/flash_messages', flash: flash
       .pull-right.align-middle
         = yield
+    - else
+      = yield
 
     .clearfix

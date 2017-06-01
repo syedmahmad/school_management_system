@@ -9,15 +9,15 @@
   #bs-sidebar-navbar-collapse-1.collapse.navbar-collapse
     %ul.nav.navbar-nav
       %li.active
-        %a{:href => "#"}
+        %a{:href => "/"}
           Home
           %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-home{:style => "font-size:16px;"}
       %li
-        %a{:href => "#"}
+        = link_to students_path do
           Students
           %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-book{:style => "font-size:16px;"}
       %li
-        %a{:href => "#"}
+        = link_to teachers_path do
           Teachers
           %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-plane{:style => "font-size:16px;"}
       %li
@@ -33,9 +33,11 @@
           About Us
           %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-user{:style => "font-size:16px;"}
       %li
-        %a{:href => destroy_user_session_path, method: :delete}
+        = link_to destroy_user_session_path, method: :delete do
+          %i.fa.fa-sign-out
           Logout
           %span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-log-out{:style => "font-size:16px;"}
 
+          
 
           
